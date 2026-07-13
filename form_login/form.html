@@ -9,31 +9,38 @@
 </head>
 
 <body>
-    <h1>Form Login</h1>
-    <section>
-        <h2>Login</h2>
-        <form action="">
-            <div class="email">
+
+    <main class="login-container">
+        <form class="login-form">
+            <h2>Selamat Datang</h2>
+            <p class="subtitle">Silakan masuk ke akun Anda</p>
+
+            <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" id="email" placeholder="nama@email.com" required autocomplete="email">
             </div>
-            <div class="password">
+
+            <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" id="password" placeholder="Masukkan password" required
+                    autocomplete="current-password">
             </div>
-            <div class="checkbox">
-                <label for="checkbox">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    <span>Remember me</span>
+
+            <div class="form-actions">
+                <label class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <span>Ingat saya</span>
                 </label>
+                <a href="#" class="forgot-password">Lupa password?</a>
             </div>
-            <div class="submit">
-                <a href="#">Daftar lewat Google</a>
-                <a href="#">Daftar lewat Facebook</a>
-                <button type="submit">Login</button>
-            </div>
+
+            <button type="submit" class="btn-login">Masuk</button>
+
+            <p class="register-link">
+                Belum punya akun? <a href="#">Daftar sekarang</a>
+            </p>
         </form>
-    </section>
+    </main>
 </body>
 
 </html>
