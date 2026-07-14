@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --primary-color: #46e5da;
+    --primary-hover: #3da8a8;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #d1d5db;
+}
+
+body {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.container-form {
+    margin: 3rem auto;
+    padding: 1.4rem;
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--text-muted);
+}
+
+form.form-login {
+    background-color: var(--card-bg);
+    padding: 3.4rem 3.8rem;
+    border-radius: 50% 2px 50%;
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, .8), inset 10px 10px 20px rgba(255, 255, 255, .7), 10px 10px 15px rgba(0, 0, 0, .8);
+}
+
+.form-login h2 {
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: .4rem;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.form-login .subtitle {
+    text-align: center;
+    margin-bottom: 2.3rem;
+    color: var(--text-muted);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.form-login .form-group {
+    margin-bottom: 2.3rem;
+}
+
+.form-login .form-group label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.form-login .form-group input {
+    width: 100%;
+    padding: .7rem 1rem;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 2px solid var(--text-muted);
+    color: var(--text-main);
+    font-size: .7rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-login .form-group input:hover {
+    border: 1px solid var(--primary-hover);
+    border-radius: 10px;
+}
+
+.form-login .form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, .15);
+    border-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.form-login .checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.3rem;
+    margin-bottom: 1.3rem;
+    font-size: .8rem;
+}
+
+.checkbox .remember {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.checkbox .remember input {
+    cursor: pointer;
+}
+
+.forget,
+.sign-up a {
+    color: var(--primary-hover);
+    font-family: serif;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+button {
+    width: 100%;
+    padding: .4rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 1px solid var(--primary-hover)
+}
+
+button:hover {
+    border: 1px solid var(--border-color);
+    background-color: var(--primary-hover);
+    color: #fff;
+}
+
+.sign-up {
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-align: center;
+    margin-right: .5rem;
+}
+
+.sign-up a {
+    margin-left: .5rem;
+}
