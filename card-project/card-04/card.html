@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Destinasi Populer - Responsive</title>
+    <link rel="stylesheet" href="card.css">
+    <!-- FontAwesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Container Utama Responsif -->
+    <main class="main-container">
+        <header class="page-header">
+            <h1>Kartu Destinasi Populer</h1>
+            <p>Jelajahi keindahan destinasi terbaik di seluruh Indonesia</p>
+        </header>
+
+        <!-- Grid Pembungkus Card -->
+        <div class="card-grid">
+
+            <!-- Card Item 1 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop"
+                        alt="Pantai Nusa Dua" class="card-image">
+                    <div class="card-badges">
+                        <span class="badge"><i class="fa-solid fa-location-dot"></i> INDONESIA</span>
+                        <span class="badge"><i class="fa-solid fa-location-dot"></i> BALI</span>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="card-title">Pantai Nusa Dua</h2>
+
+                    <div class="card-rating">
+                        <span>Tingkat Kepopuleran: <strong>4.8</strong></span>
+                        <i class="fa-solid fa-star star-icon"></i>
+                    </div>
+
+                    <p class="card-description">
+                        Nikmati surga tersembunyi dengan pantai pasir putih dan air laut kristal di Nusa Dua. Sempurna
+                        untuk relaksasi dan liburan tak terlupakan.
+                    </p>
+
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <i class="fa-solid fa-sun stat-icon sun"></i>
+                            <div>
+                                <div class="stat-val">29°C</div>
+                                <div class="stat-lbl">Cerah</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-item">
+                            <i class="fa-solid fa-comment-dots stat-icon"></i>
+                            <div>
+                                <div class="stat-val">1.2k</div>
+                                <div class="stat-lbl">Ulasan</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-item">
+                            <i class="fa-solid fa-location-dot stat-icon"></i>
+                            <div>
+                                <div class="stat-lbl-top">Lokasi:</div>
+                                <div class="stat-val">Bali</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="card-price">
+                            <strong>Rp 1.500.000</strong> <span>/ malam</span>
+                        </div>
+                        <button class="btn-booking">PESAN SEKARANG</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card Item 2 (Duplikasi untuk demonstrasi Grid Responsif) -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?q=80&w=800&auto=format&fit=crop"
+                        alt="Candi Borobudur" class="card-image">
+                    <div class="card-badges">
+                        <span class="badge"><i class="fa-solid fa-location-dot"></i> INDONESIA</span>
+                        <span class="badge"><i class="fa-solid fa-location-dot"></i> JATENG</span>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="card-title">Candi Borobudur</h2>
+
+                    <div class="card-rating">
+                        <span>Tingkat Kepopuleran: <strong>4.9</strong></span>
+                        <i class="fa-solid fa-star star-icon"></i>
+                    </div>
+
+                    <p class="card-description">
+                        Jelajahi warisan budaya mahakarya arsitektur dunia terbesar di Indonesia dan nikmati pemandangan
+                        matahari terbit yang memesona.
+                    </p>
+
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <i class="fa-solid fa-sun stat-icon sun"></i>
+                            <div>
+                                <div class="stat-val">27°C</div>
+                                <div class="stat-lbl">Cerah</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-item">
+                            <i class="fa-solid fa-comment-dots stat-icon"></i>
+                            <div>
+                                <div class="stat-val">3.5k</div>
+                                <div class="stat-lbl">Ulasan</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-item">
+                            <i class="fa-solid fa-location-dot stat-icon"></i>
+                            <div>
+                                <div class="stat-lbl-top">Lokasi:</div>
+                                <div class="stat-val">Magelang</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="card-price">
+                            <strong>Rp 750.000</strong> <span>/ paket</span>
+                        </div>
+                        <button class="btn-booking">PESAN SEKARANG</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <script src="card.js"></script>
+</body>
+
+</html>
