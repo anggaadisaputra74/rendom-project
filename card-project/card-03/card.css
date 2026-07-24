@@ -1,0 +1,70 @@
+/* ==========================================
+   1. STYLE DASAR CSS RESET
+   ========================================== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fefefe;
+    --color: #ffff;
+    --font: #222;
+    --fonts: #999;
+}
+
+body,
+html {
+    font-family: 'Expletus Sans', sans-serif, serif, arial, times;
+    color: var(--font);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: 1.4rem .9rem;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+    font-size: 2.3rem;
+    margin-bottom: .4rem;
+    color: #113333;
+}
+
+.page-header p {
+    color: var(--fonts);
+    font-size: .8rem;
+    margin-bottom: 2.3rem;
+}
+
+/* ==========================================
+   2. GRID LAYOUT RESPONSIVE (MOBILE FIRST)
+   ========================================== */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* ==========================================
+   3. DESAIN CARD UI
+   ========================================== */
+
+.card {
+    width: 100%;
+    max-width: 380px;
+    background-color: var(--color);
+    padding: .8rem;
+    border-radius: 20px;
+}
