@@ -126,7 +126,7 @@ html {
 .card .card-content .card-title {
     font-size: 1.9rem;
     font-weight: 500;
-    margin-bottom: .1rem;
+    margin-bottom: .8rem;
     text-transform: capitalize;
     text-align: center;
     color: var(--c-font);
@@ -211,6 +211,7 @@ html {
 .card .card-footer .btn-booking {
     font-size: .75rem;
     font-weight: 700;
+    text-transform: uppercase;
     letter-spacing: .2px;
     white-space: nowrap;
     padding: .5rem .6rem;
@@ -233,3 +234,27 @@ html {
 /* ==========================================
    4. MEDIA QUERIES (BREAKPOINTS)
    ========================================== */
+
+/* --tablet (lebar > 640px) => repeat 2 kolom-- */
+
+@media (min-width: 640px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --desktop atau pc (lebar > 1024px) => repeat 3 kolom-- */
+
+@media (min-width: 1024px) {
+    body {
+        padding: 2.7rem 1.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pade-header {
+        font-size: 2.7rem;
+    }
+}
