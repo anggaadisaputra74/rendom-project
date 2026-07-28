@@ -25,7 +25,7 @@ body {
     margin: 3rem auto;
     padding: 1.4rem;
     width: 100%;
-    min-width: 400px;
+    max-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,8 +43,8 @@ h1 {
 form.form-login {
     background-color: var(--card-bg);
     padding: 3.4rem 3.8rem;
-    border-radius: 50% 2px 50%;
-    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, .8), inset 10px 10px 20px rgba(255, 255, 255, .7), 10px 10px 15px rgba(0, 0, 0, .8);
+    border-radius: 50% 30% 50% 30%;
+    box-shadow: inset 5px 8px 10px rgba(0, 0, 0, .8), inset 10px 10px 20px rgba(255, 255, 255, .7), 10px 10px 15px rgba(0, 0, 0, .8);
 }
 
 .form-login h2 {
