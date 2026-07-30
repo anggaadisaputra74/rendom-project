@@ -1,0 +1,105 @@
+/* --google fonts-- */
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f3f3f3;
+    --font: #3334;
+}
+
+html,
+body {
+    font-family: "Edu VIC WA NT Hand", sans-serif, arial;
+    background-color: var(--bg-color);
+    color: var(--font);
+    min-height: 100vh;
+    padding: 1.5rem .9rem;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2.8rem;
+}
+
+.page-header h1 {
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* style gallery-grid for mobile phone 1 colom */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* style gallery */
+
+.gallery {
+    width: 100%;
+    background-color: #fff;
+    padding: .8rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: inset 2px 6px 6px rgba(0, 0, 0, .15);
+}
+
+.gallery .img {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.gallery .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery .img:hover img {
+    transform: scale(1.2);
+}
+
+/* ==========================================
+   4. MEDIA QUERIES (BREAKPOINTS)
+   ========================================== */
+
+/* --tablet (lebar > 640px) => repeat 2 kolom-- */
+
+@media (min-width: 640px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --desktop atau pc (lebar > 1024px) => repeat 3 kolom-- */
+
+@media (min-width: 1024px) {
+    body {
+        padding: 2.7rem 1.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .page-header {
+        font-size: 2.7rem;
+    }
+}
