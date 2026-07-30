@@ -74,12 +74,7 @@ body {
 
 .gallery .img:hover img {
     transform: scale(1.2) rotate(5deg);
-    /* transform: rotate(3deg); */
 }
-
-/* .gallery .img:hover img {
-    transform: rotate(3deg);
-} */
 
 /* ==========================================
    4. MEDIA QUERIES (BREAKPOINTS)
