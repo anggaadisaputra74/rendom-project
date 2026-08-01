@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Project - JS Version</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <main class="main-container">
+        <header class="page-header">
+            <h1>our photo gallery</h1>
+        </header>
+
+        <!-- Dynamic Filter Bar & Hamburger -->
+        <article class="top-content">
+            <div class="top-bar-header">
+                <h3>photo gallery</h3>
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <nav class="filter-nav" id="filterNav">
+                <button class="filter-btn active" data-filter="all">all photo</button>
+                <button class="filter-btn" data-filter="family">family photo</button>
+                <button class="filter-btn" data-filter="child">child photo</button>
+                <button class="filter-btn" data-filter="place">visited place</button>
+            </nav>
+        </article>
+
+        <!-- Photo Gallery Grid -->
+        <section class="photo-gallery" id="photoGallery">
+            <div class="pic place">
+                <img src="img/01.jpg" alt="Visited Place">
+            </div>
+            <div class="pic family">
+                <img src="img/02.jpg" alt="Family Photo">
+            </div>
+            <div class="pic child">
+                <img src="img/03.jpg" alt="Child Photo">
+            </div>
+            <div class="pic place">
+                <img src="img/04.jpg" alt="Visited Place">
+            </div>
+            <div class="pic family">
+                <img src="img/05.jpg" alt="Family Photo">
+            </div>
+            <div class="pic child">
+                <img src="img/06.jpg" alt="Child Photo">
+            </div>
+            <div class="pic place">
+                <img src="img/07.jpg" alt="Visited Place">
+            </div>
+            <div class="pic family">
+                <img src="img/08.jpg" alt="Family Photo">
+            </div>
+            <div class="pic child">
+                <img src="img/03.jpg" alt="Child Photo">
+            </div>
+            <div class="pic place">
+                <img src="img/10.jpg" alt="Visited Place">
+            </div>
+            <div class="pic family">
+                <img src="img/08.jpg" alt="Family Photo">
+            </div>
+            <div class="pic family">
+                <img src="img/07.jpg" alt="Family Photo">
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

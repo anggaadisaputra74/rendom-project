@@ -1,0 +1,282 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f9f9f9;
+    --fonts: #222;
+    --primary-color: #0b8871;
+    --header-bg: #445555;
+    --nav-bg: #cdcccc;
+}
+
+html,
+body {
+    font-family: "Edu VIC WA NT Hand", "Playwrite NZ Guides", sans-serif, arial;
+    background-color: var(--bg-color);
+    color: var(--fonts);
+    min-height: 100vh;
+    padding: 1.5rem 0.9rem;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header Animation */
+.page-header h1 {
+    position: relative;
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.page-header h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        width: 100px;
+    }
+
+    50% {
+        width: 200px;
+    }
+}
+
+/* Top Navigation Bar */
+.top-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 2.5rem auto;
+    background-color: var(--nav-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: inset 2px 4px 6px rgba(0, 0, 0, .15);
+    position: relative;
+}
+
+.top-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-bg);
+    border-radius: 15px 0 0 15px;
+}
+
+.top-bar-header h3 {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 2rem;
+    color: var(--bg-color);
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+/* Filter Buttons */
+.filter-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1.5rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: var(--fonts);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Hamburger Button (Hidden on Desktop) */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+.hamburger-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Photo Gallery Grid */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pic {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, .15);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.pic.hide {
+    display: none;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.pic:hover img {
+    transform: scale(1.2);
+}
+
+.pic::before {
+    content: 'Photo Gallery';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--bg-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    margin-top: -5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.pic::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: height 0.3s ease;
+}
+
+.pic:hover::after {
+    height: 100%;
+}
+
+.pic:hover::before {
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Laptop / Tablet View */
+@media (max-width: 992px) {
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-content {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 15px;
+    }
+
+    .top-bar-header {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    /* Collapsible Navigation Menu */
+    .filter-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+        gap: 0.5rem;
+        background-color: var(--nav-bg);
+        border-radius: 0 0 15px 15px;
+    }
+
+    .filter-nav.active {
+        display: flex;
+    }
+
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+}
