@@ -5,77 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slider Project</title>
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- for styling css -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Styling CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- image slider project html css dan javascript -->
-    <main class="main-container">
-        <header class="page-header">
-            <h1>image slider project</h1>
-        </header>
+    <header class="page-header">
+        <h1>Image Slider Project</h1>
+    </header>
 
-        <!-- slide container -->
+    <main class="main-container">
         <article class="slide">
-            <div class="item" style="background-image: url(img/01.jpg);">
+            <div class="item">
+                <img src="img/01.jpg" alt="Hello World" class="slide-img">
                 <div class="content">
-                    <h3 class="name">hello world</h3>
+                    <h3 class="name">Hello World</h3>
                     <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, consectetur!</p>
-                    <button class="btn">read more</button>
+                    <button class="button">Read More</button>
                 </div>
             </div>
-            <div class="item" style="background-image: url(img/02.jpg);">
+            <div class="item">
+                <img src="img/02.jpg" alt="Explore Nature" class="slide-img">
                 <div class="content">
-                    <h3 class="name">hello world</h3>
+                    <h3 class="name">Explore Nature</h3>
                     <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, consectetur!</p>
-                    <button class="btn">read more</button>
+                    <button class="button">Read More</button>
                 </div>
             </div>
-            <div class="item" style="background-image: url(img/03.jpg);">
+            <div class="item">
+                <img src="img/03.jpg" alt="Deep Ocean" class="slide-img">
                 <div class="content">
-                    <h3 class="name">hello world</h3>
+                    <h3 class="name">Deep Ocean</h3>
                     <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, consectetur!</p>
-                    <button class="btn">read more</button>
+                    <button class="button">Read More</button>
                 </div>
             </div>
-            <div class="item" style="background-image: url(img/04.jpg);">
+            <div class="item">
+                <img src="img/04.jpg" alt="Mountain View" class="slide-img">
                 <div class="content">
-                    <h3 class="name">hello world</h3>
+                    <h3 class="name">Mountain View</h3>
                     <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, consectetur!</p>
-                    <button class="btn">read more</button>
+                    <button class="button">Read More</button>
                 </div>
             </div>
-            <div class="item" style="background-image: url(img/05.jpg);">
+            <div class="item">
+                <img src="img/05.jpg" alt="City Lights" class="slide-img">
                 <div class="content">
-                    <h3 class="name">hello world</h3>
+                    <h3 class="name">City Lights</h3>
                     <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, consectetur!</p>
-                    <button class="btn">read more</button>
+                    <button class="button">Read More</button>
                 </div>
             </div>
-            <div class="item" style="background-image: url(img/06.jpg);">
+            <div class="item">
+                <img src="img/06.jpg" alt="Desert Dunes" class="slide-img">
                 <div class="content">
-                    <h3 class="name">hello world</h3>
+                    <h3 class="name">Desert Dunes</h3>
                     <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, consectetur!</p>
-                    <button class="btn">read more</button>
+                    <button class="button">Read More</button>
                 </div>
             </div>
         </article>
 
-        <!-- button controls -->
+        <!-- Button Controls -->
         <article class="btn">
-            <button class="prev"><i class="fas fa-chevron-left"></i>Prev</button>
-            <button class="next">Next<i class="fas fa-chevron-right"></i></button>
+            <button class="prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button class="next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </article>
     </main>
 
-
-
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
