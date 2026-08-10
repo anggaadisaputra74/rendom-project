@@ -18,3 +18,15 @@ body {
     font-family: var(--font-family);
     min-height: 100vh;
 }
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+    padding: 1.3rem;
+}
