@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+root {
+    --bg-color: #fefefe;
+    --card-color: #ffff;
+    --font-color: #333;
+    --btn-color: #007bff;
+    --font-family: 'Titillium Web', 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    min-height: 100vh;
+}
