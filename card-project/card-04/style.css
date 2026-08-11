@@ -40,18 +40,18 @@ body {
     margin-bottom: .3rem;
 }
 
-/* .page-header h1::before {
+.page-header h1::before {
     content: '';
     position: absolute;
     width: 100px;
-    height: 10px;
+    height: 3px;
     background-color: var(--btn-color);
     border-radius: 10px;
     bottom: -10px;
     left: 50%;
     right: -50%;
     transform: translateX(-50%);
-    animation: animation 2s linear infinite;
+    animation: animation 4s linear infinite;
 }
 
 @keyframes animation {
@@ -64,7 +64,7 @@ body {
     50% {
         width: 200px;
     }
-} */
+}
 
 
 
