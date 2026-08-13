@@ -221,3 +221,28 @@ body {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
+
+
+/* ==========================================
+   4. MEDIA QUERIES (BREAKPOINTS)
+   ========================================== */
+
+@media (min-width: 645px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1028px) {
+    body {
+        padding: 2.7rem 1.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .page-header h1 {
+        font-size: 3.2rem;
+    }
+}
