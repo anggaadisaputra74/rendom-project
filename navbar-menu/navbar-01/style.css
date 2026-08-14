@@ -19,3 +19,24 @@
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
 }
+
+body {
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: var(--sidebar-color);
+    padding: .5rem .7rem;
+}
+
+.sidebar .img-text img {
+    width: 90px;
+    border-radius: 30%;
+    /* padding: .5rem; */
+}
