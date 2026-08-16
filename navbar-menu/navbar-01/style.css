@@ -14,7 +14,7 @@
     --tougle-color: #ddd;
     --fonts-color: #707070;
     /* === transition === */
-    --tran-03: all 0.2s ease;
+    --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
@@ -25,6 +25,20 @@ body {
     background-color: var(--body-color);
 }
 
+/* === resauble css === */
+.sidebar .text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--fonts-color);
+}
+
+.sidebar .img {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* === sidebar === */
 .sidebar {
     position: fixed;
     top: 0;
@@ -35,8 +49,157 @@ body {
     padding: .5rem .7rem;
 }
 
+.sidebar header {
+    position: relative;
+}
+
 .sidebar .img-text img {
-    width: 90px;
+    width: 80px;
     border-radius: 30%;
-    /* padding: .5rem; */
+}
+
+.sidebar header .img-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .img-text .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name {
+    font-weight: 600;
+}
+
+.header-text .profesion {
+    margin-top: -.2rem;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+    color: var(--tougle-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 40% 40% 4px;
+    font-size: 1.5rem;
+}
+
+/* === .menu-bar === */
+.sidebar li {
+    height: 50px;
+    margin-top: .5rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon {
+    min-width: 60px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+    color: var(--fonts-color);
+    transition: var(--tran-02);
+}
+
+.sidebar li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover {
+    background-color: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--sidebar-color);
+}
+
+.sidebar .search-box {
+    background-color: var(--primary-color-light);
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color-light);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-bar .mode {
+    background-color: var(--primary-color-light);
+    margin-bottom: 3.2rem;
+}
+
+.menu-bar .mode .moon-sun {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .mode i {
+    position: absolute;
+}
+
+.menu-bar .mode i .sun {
+    opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+}
+
+.toggle-switch .switch {
+    width: 44px;
+    height: 22px;
+    position: relative;
+    background-color: var(--tougle-color);
+    border-radius: 25px;
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--sidebar-color);
 }
