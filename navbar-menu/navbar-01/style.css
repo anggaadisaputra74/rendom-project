@@ -23,19 +23,16 @@
 body {
     height: 100vh;
     background-color: var(--body-color);
+    transition: var(--tran-04);
 }
 
-/* === resauble css === */
-.sidebar .text {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--fonts-color);
-}
-
-.sidebar .img {
-    min-width: 60px;
-    display: flex;
-    align-items: center;
+body.dark {
+    --body-color: #020614;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3c3b;
+    --tougle-color: #ddd;
+    --fonts-color: #ccc;
 }
 
 /* === sidebar === */
@@ -47,6 +44,39 @@ body {
     width: 250px;
     background-color: var(--sidebar-color);
     padding: .5rem .7rem;
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+/* === untuk fungsi tombol close === */
+.sidebar.close {
+    width: 88px;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar.close header .toggle {
+    /* transform: translateY(-50%) rotate(180deg); */
+    transform: translateY(-50%);
+}
+
+
+/* === resauble css === */
+.sidebar .text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--fonts-color);
+    transition: var(--tran-02);
+    white-space: none;
+    opacity: 1;
+}
+
+.sidebar .img {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar header {
@@ -54,7 +84,7 @@ body {
 }
 
 .sidebar .img-text img {
-    width: 80px;
+    width: 60px;
     border-radius: 30%;
 }
 
@@ -81,7 +111,7 @@ header .img-text .header-text {
     position: absolute;
     top: 50%;
     right: -25px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(180deg);
     width: 25px;
     height: 25px;
     background-color: var(--primary-color);
@@ -91,6 +121,7 @@ header .img-text .header-text {
     justify-content: center;
     border-radius: 4px 40% 40% 4px;
     font-size: 1.5rem;
+    transition: var(--tran-03);
 }
 
 /* === .menu-bar === */
@@ -137,6 +168,8 @@ header .img-text .header-text {
 
 .sidebar .search-box {
     background-color: var(--primary-color-light);
+    border-radius: 10px;
+    transition: var(--tran-05);
 }
 
 .search-box input {
@@ -156,8 +189,10 @@ header .img-text .header-text {
 }
 
 .menu-bar .mode {
+    position: relative;
     background-color: var(--primary-color-light);
     margin-bottom: 3.2rem;
+    border-radius: 6px;
 }
 
 .menu-bar .mode .moon-sun {
@@ -169,19 +204,32 @@ header .img-text .header-text {
 
 .menu-bar .mode i {
     position: absolute;
+    transition: var(--tran-03);
 }
 
-.menu-bar .mode i .sun {
+.menu-bar .mode i.sun {
+    opacity: 0;
+}
+
+body.dark .menu-bar .mode i.sun {
+    opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
     opacity: 0;
 }
 
 .menu-bar .mode .toggle-switch {
+    position: absolute;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     min-width: 60px;
     cursor: pointer;
+    background-color: var(--primary-color-light);
+    border-radius: 10px;
 }
 
 .toggle-switch .switch {
@@ -202,4 +250,46 @@ header .img-text .header-text {
     height: 15px;
     border-radius: 50%;
     background-color: var(--sidebar-color);
+    transition: var(--tran-03);
+}
+
+/* ===body class dark=== */
+body.dark .switch::before {
+    left: 24px;
+}
+
+body.dark .sidebar header .toggle {
+    color: var(--fonts-color);
+}
+
+body.dark .sidebar header .toggle {
+    /* transform: rotate(180deg); */
+    color: var(--fonts-color);
+}
+
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+    color: var(--tougle-color);
+}
+
+/* === === */
+.home {
+    position: relative;
+    height: 100vh;
+    width: calc(100% -250px);
+    left: 250px;
+    background-color: var(--body-color);
+    transition: var(--tran-04);
+}
+
+.home .text {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: var(--fonts-color);
+    padding: .4rem 2.5rem;
+}
+
+.sidebar.close~.home {
+    left: 88px;
+    width: calc(100% - 88px);
 }
