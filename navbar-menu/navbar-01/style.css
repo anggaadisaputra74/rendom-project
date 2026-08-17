@@ -13,6 +13,7 @@
     --primary-color-light: #f6f5ff;
     --tougle-color: #ddd;
     --fonts-color: #707070;
+
     /* === transition === */
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -24,6 +25,7 @@ body {
     height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-04);
+    overflow-x: hidden;
 }
 
 body.dark {
@@ -48,35 +50,30 @@ body.dark {
     z-index: 100;
 }
 
-/* === untuk fungsi tombol close === */
 .sidebar.close {
     width: 88px;
 }
 
-.sidebar.close .text {
-    opacity: 0;
-}
-
-.sidebar.close header .toggle {
-    /* transform: translateY(-50%) rotate(180deg); */
-    transform: translateY(-50%);
-}
-
-
-/* === resauble css === */
 .sidebar .text {
     font-size: 1rem;
     font-weight: 500;
     color: var(--fonts-color);
     transition: var(--tran-02);
-    white-space: none;
+    white-space: nowrap;
+    /* Perbaikan syntax */
     opacity: 1;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .sidebar .img {
     min-width: 60px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .sidebar header {
@@ -84,19 +81,19 @@ body.dark {
 }
 
 .sidebar .img-text img {
-    width: 60px;
-    border-radius: 30%;
+    width: 40px;
+    border-radius: 6px;
 }
 
 .sidebar header .img-text {
     display: flex;
     align-items: center;
-    justify-content: space-around;
 }
 
 header .img-text .header-text {
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 }
 
 .header-text .name {
@@ -105,6 +102,7 @@ header .img-text .header-text {
 
 .header-text .profesion {
     margin-top: -.2rem;
+    font-size: 0.8rem;
 }
 
 .sidebar header .toggle {
@@ -119,9 +117,14 @@ header .img-text .header-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px 40% 40% 4px;
-    font-size: 1.5rem;
-    transition: var(--tran-03);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.sidebar.close header .toggle {
+    transform: translateY(-50%);
 }
 
 /* === .menu-bar === */
@@ -139,10 +142,6 @@ header .img-text .header-text {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.sidebar li .icon,
-.sidebar li .text {
     color: var(--fonts-color);
     transition: var(--tran-02);
 }
@@ -166,6 +165,10 @@ header .img-text .header-text {
     color: var(--sidebar-color);
 }
 
+.sidebar .menu {
+    margin-top: .8rem;
+}
+
 .sidebar .search-box {
     background-color: var(--primary-color-light);
     border-radius: 10px;
@@ -173,16 +176,19 @@ header .img-text .header-text {
 }
 
 .search-box input {
+    font-size: 1rem;
+    font-weight: 500;
     height: 100%;
     width: 100%;
     background-color: var(--primary-color-light);
     outline: none;
     border: none;
     border-radius: 10px;
+    color: var(--fonts-color);
 }
 
 .sidebar .menu-bar {
-    height: calc(100% - 20px);
+    height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -191,7 +197,6 @@ header .img-text .header-text {
 .menu-bar .mode {
     position: relative;
     background-color: var(--primary-color-light);
-    margin-bottom: 3.2rem;
     border-radius: 6px;
 }
 
@@ -228,7 +233,6 @@ body.dark .menu-bar .mode i.moon {
     height: 100%;
     min-width: 60px;
     cursor: pointer;
-    background-color: var(--primary-color-light);
     border-radius: 10px;
 }
 
@@ -253,33 +257,19 @@ body.dark .menu-bar .mode i.moon {
     transition: var(--tran-03);
 }
 
-/* ===body class dark=== */
 body.dark .switch::before {
     left: 24px;
 }
 
-body.dark .sidebar header .toggle {
-    color: var(--fonts-color);
-}
-
-body.dark .sidebar header .toggle {
-    /* transform: rotate(180deg); */
-    color: var(--fonts-color);
-}
-
-body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text {
-    color: var(--tougle-color);
-}
-
-/* === === */
+/* === Content Area === */
 .home {
     position: relative;
-    height: 100vh;
-    width: calc(100% -250px);
+    min-height: 100vh;
+    width: calc(100% - 250px);
+    /* Perbaikan spasi calc */
     left: 250px;
     background-color: var(--body-color);
-    transition: var(--tran-04);
+    transition: var(--tran-05);
 }
 
 .home .text {
@@ -292,4 +282,55 @@ body.dark .sidebar li a:hover .text {
 .sidebar.close~.home {
     left: 88px;
     width: calc(100% - 88px);
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+}
+
+/* === RESPONSIVE MEDIA QUERIES (Mobile & Tablet) === */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        left: -250px;
+        width: 250px !important;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar header .toggle {
+        right: -40px;
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    .sidebar.open header .toggle {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .sidebar.close .text {
+        opacity: 1;
+    }
+
+    .home {
+        left: 0;
+        width: 100% !important;
+    }
+
+    .sidebar.close~.home {
+        left: 0;
+        width: 100% !important;
+    }
+
+    .overlay.active {
+        display: block;
+    }
 }
