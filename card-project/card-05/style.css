@@ -121,7 +121,7 @@ body {
     position: absolute;
     top: 12px;
     left: 74%;
-    background-color: rgba(0, 0, 0, .3j);
+    background-color: rgba(0, 0, 0, .3);
     color: var(--sidebar-color);
     padding: .5rem;
     border-radius: 10px;
