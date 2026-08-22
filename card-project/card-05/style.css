@@ -155,13 +155,67 @@ body {
 }
 
 .card-content .content .card-descripsi {
-    padding: 0 .4rem;
-    font-weight: 700;
-    font-size: 1.2rem;
+    padding: 0 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    font-family: times;
 }
 
+.card-content .card-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.7rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--fonts-color);
+}
 
+.card-price .price-current {
+    color: var(--font-color);
+}
 
+.card-price .price-old {
+    font-size: 1.1rem;
+    text-decoration: line-through;
+    text-decoration-color: #de304a;
+}
+
+.card-content .btn {
+    padding: .8rem .3rem;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    outline: none;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shopping {
+    /* ===properti khusus feather icon=== */
+    fill: var(--fonts-color);
+    stroke: var(--font-color);
+
+    /* Ukuran ikon */
+    width: 28px;
+    height: 29px;
+}
+
+.card-content .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+    border: none;
+}
+
+.card-content .btn:active {
+    background-color: #063b2f;
+}
 
 
 
