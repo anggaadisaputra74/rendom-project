@@ -83,6 +83,7 @@ body {
 
 /* === card style css === */
 .card {
+    padding: .6rem;
     display: flex;
     flex-direction: column;
     max-width: 380px;
@@ -183,18 +184,22 @@ body {
 }
 
 .card-content .btn {
-    padding: .8rem .3rem;
+    padding: .8rem .5rem;
     margin: 0 auto;
-    font-size: 1.7rem;
+    font-size: .89rem;
     font-weight: 700;
     letter-spacing: -1px;
-    outline: none;
+    border: none;
     border-radius: 15px;
-    border: 2px solid var(--primary-color);
     color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: inset 1px 1px 6px rgba(0, 0, 0, .3)
+}
+
+.btn span {
+    font-family: sans-serif;
 }
 
 .shopping {
@@ -211,6 +216,7 @@ body {
     background-color: var(--primary-color);
     color: var(--primary-color-light);
     border: none;
+    box-shadow: inset 1px 1px 6px rgba(255, 255, 255, 1);
 }
 
 .card-content .btn:active {
