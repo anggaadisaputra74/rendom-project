@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Form Login Part #04</title>
+    <!-- === STYLE CSS === -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- === FEATHER ICONS === -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- === GOOGLE FONTS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="main-container">
+        <div class="form">
+            <form action="" class="form-card">
+                <header class="page-header">
+                    <h2>Login</h2>
+                </header>
+
+                <!-- === GROUP EMAIL === -->
+                <div class="input-group">
+                    <label for="mail">Email</label>
+                    <div class="input-wrapper">
+                        <input class="input" type="email" name="email" id="mail" placeholder="Name@email.com" required>
+                        <span>
+                            <i data-feather="mail"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- === GROUP PASSWORD === -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input class="input" type="password" name="password" id="password" placeholder="Input password"
+                            required>
+                        <button type="button" class="toggle-password" id="togglePassword"
+                            aria-label="Toggle password visibility">
+                            <i data-feather="eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- === REMEMBER ME & FORGET PASSWORD === -->
+                <div class="form-options">
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="check" required>
+                        <label for="check">Remember me</label>
+                    </div>
+                    <a href="#" class="forget-password">Forget password</a>
+                </div>
+
+                <!-- === BUTTON SUBMIT === -->
+                <div class="btn-submit">
+                    <button type="submit">LOGIN</button>
+                </div>
+
+                <!-- === SOCIAL LOGIN === -->
+                <div class="social-login">
+                    <span>Or login with</span>
+                    <a href="" class="btn-google">
+                        <img src="" alt="google logo">
+                        <span>Google</span>
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+
+
+    <!-- === SCRIPT FEATHER ICONS === -->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- === SCRIPT FOR APP.JS === -->
+    <script src="app.js"></script>
+</body>
+
+</html>

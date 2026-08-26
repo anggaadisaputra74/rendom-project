@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--family);
+}
+
+:root {
+    /* Color Palette */
+    --body-color: #e4e9f7;
+    --card-color: #ffffff;
+    --primary-color: #10745c;
+    --primary-hover: #0c5946;
+    --font-title: #202020;
+    --font-sub: #707070;
+    --border-color: #dcdcdc;
+
+    /* Soft Box Shadow */
+    --shadow-card: inset 0px -1px 6px rgba(0, 0, 0, 0.9), inset 0px -1px 6px rgba(255, 255, 255, .7);
+
+    /* Fonts & Transition */
+    --family: 'Playfair Display', sans-serif;
+    --tran-fast: all 0.2s ease;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--font-sub);
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+}
+
+/* === style dasar === */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 100%;
+    max-width: 440px;
+}
+
+/* === card style === */
+.form-card {
+    padding: 2.5rem 2rem;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card)
+}
+
+/* === style page-header === */
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--primary-hover);
+    position: relative;
+    display: inline-block;
+}
+
+.page-header h2::before {
+    content: '';
+    height: 3.5px;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    background-color: var(--primary-color);
+    transform: translateX(-50%);
+    border-radius: 10px;
+    animation: pulseLine 3s ease-in-out infinite;
+}
+
+@keyframes pulseLine {
+
+    0%,
+    100% {
+        width: 40px;
+    }
+
+    50% {
+        width: 90px;
+    }
+}
+
+/* === style input-group === */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: .99rem;
+    font-weight: 600;
+    margin-bottom: .4rem;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: .78rem 2rem .78rem 1rem;
+    border: 1px solid var(--body-color);
+    outline: none;
+    border-radius: 8px;
+    font-size: .75rem;
+    background-color: var(--border-color);
+    box-shadow: var(--shadow-card);
+    transition: var(--tran-fast);
+}
+
+.input:focus {
+    transform: translateX(10px);
+    outline: none;
+}
+
+/* LANJUT BESOK LAGI.... */
