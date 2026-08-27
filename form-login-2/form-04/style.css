@@ -124,4 +124,125 @@ body {
     outline: none;
 }
 
-/* LANJUT BESOK LAGI.... */
+/* === icons and toggle button === */
+.input-icon,
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: var(--font-sub);
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: var(--primary-hover);
+}
+
+.input-icon svg,
+.toggle-password svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* === form option (checkbox dan forget password) === */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+    font-size: .87rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+}
+
+.checkbox label {
+    cursor: pointer;
+}
+
+.forget-password {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: var(--tran-fast);
+}
+
+.forget-password:hover {
+    text-decoration: underline;
+}
+
+/* === button .btn-submit === */
+.btn-submit {
+    margin-bottom: 1rem;
+}
+
+.btn-submit button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--card-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    transition: var(--tran-fast);
+    cursor: pointer;
+}
+
+/* === social google === */
+.social-login {
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 600;
+    /* padding-top: 1.25rem; */
+}
+
+.social-login>span {
+    display: block;
+    padding: .8rem;
+    margin-bottom: .8rem;
+    font-size: .87rem;
+    /* border: 1px solid var(--border-color); */
+    border-radius: 8px;
+}
+
+.social-login .btn-google {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--font-title);
+    transition: var(--tran-fast);
+    box-shadow: var(--shadow-card);
+}
+
+.btn-google :hover {
+    background-color: var(--card-color);
+}
+
+.btn-google img {
+    width: 25px;
+    height: 25px;
+}
