@@ -27,6 +27,56 @@ body {
     background-color: var(--body-color);
     color: var(--font-title);
     min-height: 100vh;
-    max-width: 1200px;
     padding: 1.4rem .9rem;
+}
+
+/* === grid for mobile fist === */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+/* === css style content card === */
+
+.main-container {
+    max-width: 1200px;
+    margin: 1.3rem auto;
+}
+
+/* === style and animasi for header h1 === */
+.page-header {
+    text-align: center;
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    margin-bottom: 3.3rem;
+}
+
+.page-header h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-hover);
+    border-radius: 5px;
+    bottom: -20px;
+    left: 50%;
+    right: -50%;
+    transform: translateX(-50%);
+    animation: animation 4s linear infinite;
+}
+
+@keyframes animation {
+
+    0%,
+    100% {
+        width: 100px;
+    }
+
+    50% {
+        width: 200px;
+    }
 }
