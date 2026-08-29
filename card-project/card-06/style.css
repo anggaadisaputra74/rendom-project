@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--family);
+}
+
+:root {
+    /* Color Palette */
+    --body-color: #e4e9f7;
+    --card-color: #ffffff;
+    --primary-color: #10745c;
+    --primary-hover: #0c5946;
+    --font-title: #202020;
+    --font-sub: #707070;
+    --border-color: #dcdcdc;
+
+    /* Soft Box Shadow */
+    --shadow-card: inset 0px -1px 6px rgba(0, 0, 0, 0.9), inset 0px -1px 6px rgba(255, 255, 255, .7);
+
+    /* Fonts & Transition */
+    --family: 'Inter', 'Playfair Display', sans-serif;
+    --tran-fast: all 0.2s ease;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--font-title);
+    min-height: 100vh;
+    max-width: 1200px;
+    padding: 1.4rem .9rem;
+}
