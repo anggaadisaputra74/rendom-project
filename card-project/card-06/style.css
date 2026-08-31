@@ -19,7 +19,8 @@
     --shadow-card: inset 0px -1px 6px rgba(0, 0, 0, 0.9), inset 0px -1px 6px rgba(255, 255, 255, .7);
 
     /* Fonts & Transition */
-    --family: 'Inter', 'Playfair Display', sans-serif;
+    --family: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
     --tran-fast: all 0.2s ease;
 }
 
@@ -55,6 +56,11 @@ body {
     margin-bottom: 3.3rem;
 }
 
+.page-header h1 {
+    font-family: var(--font-serif);
+    color: var(--font-sub)
+}
+
 .page-header h1::before {
     content: '';
     position: absolute;
@@ -64,7 +70,7 @@ body {
     border-radius: 5px;
     bottom: -20px;
     left: 50%;
-    right: -50%;
+    /* right: -50%; */
     transform: translateX(-50%);
     animation: animation 4s linear infinite;
 }
@@ -78,5 +84,159 @@ body {
 
     50% {
         width: 200px;
+    }
+}
+
+/* === style card content === */
+.card {
+    max-width: 440px;
+    border-radius: 15px;
+    /* margin: 1.4rem; */
+    box-shadow: var(--shadow-card);
+    background-color: var(--card-color);
+    transition: var(--tran-fast);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+}
+
+.card .img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px 15px 2px 2px;
+}
+
+.card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--tran-fast);
+}
+
+.img:hover img {
+    transform: scale(1.2);
+    transition: all .3s ease;
+}
+
+.card-icons {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: .8rem;
+}
+
+.card-icons .icon {
+    background: rgba(255, 255, 255, .4);
+    padding: .3rem .6rem;
+    border-radius: 15px;
+    font-size: .68rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.icon svg {
+    width: 15px;
+    height: 15px;
+    color: var(--font-sub);
+}
+
+.card .card-content {
+    padding: .5rem 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-content .title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.card-content .description {
+    padding: 0 1rem;
+    line-height: 1.5;
+    font-size: .97rem;
+    color: var(--font-sub);
+}
+
+.booking-now {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.3rem;
+}
+
+.card-price span {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--font-sub)
+}
+
+.booking-now .btn {
+    padding: .8rem .9rem;
+    outline: none;
+    font-size: .87rem;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    box-shadow: var(--shadow-card);
+    color: var(--font-sub);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.booking-now .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    box-shadow: none;
+}
+
+.booking-now .btn:active {
+    background-color: var(--primary-hover);
+}
+
+/* ==========================================
+   4. MEDIA QUERIES (BREAKPOINTS)
+   ========================================== */
+
+/* --tablet (lebar > 640px) => repeat 2 kolom-- */
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking-now {
+        padding: 0 1rem;
+    }
+}
+
+/* --desktop atau pc (lebar > 1024px) => repeat 3 kolom-- */
+
+@media (min-width: 1024px) {
+    body {
+        padding: 2.7rem 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .page-header {
+        font-size: 2.7rem;
+    }
+
+    .booking-now {
+        padding: 0 1rem;
     }
 }
