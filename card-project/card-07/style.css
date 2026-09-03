@@ -41,14 +41,16 @@ img {
 .main-container {
     max-width: 1200px;
     margin: 1.3rem auto;
+    padding: 0 1rem;
 }
 
 /* === card-grid for mobile first ===  */
 .card-grid {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: center;
     justify-items: center;
-    gap: 1rem;
+    gap: 2.3rem;
 }
 
 /* === page-header and animation h1 === */
@@ -56,7 +58,7 @@ img {
     position: relative;
     text-align: center;
     letter-spacing: -1px;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 3.3rem;
 }
@@ -81,43 +83,58 @@ img {
 @keyframes animation {
     0% {
         transform: translateX(-50%) scaleX(0);
+        background: red;
     }
 
     50% {
         transform: translateX(-50%) scaleX(1);
+        background: var(--primary-color);
     }
 
     100% {
         transform: translateX(-50%) scaleX(0);
+        background: cyan;
     }
 }
 
 /* ======= card ======= */
 .card {
-    width: 440px;
+    width: 100%;
+    max-width: 360px;
     position: relative;
     margin: 0 auto;
     /* overflow: hidden; */
+    border-radius: 15px;
 }
 
 .card-img {
-    width: 440px;
-    border-radius: 1.6rem;
+    width: 100%;
+    height: 320px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
 }
 
 .card-data {
-    width: 380px;
-    background-color: rgba(255, 255, 255, .4);
-    border-radius: 1.6rem;
+    width: 280px;
+    /* background-color: rgba(255, 255, 255, .4); */
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 1.3rem 2rem;
     box-shadow: var(--shadow-card);
     position: absolute;
-    bottom: 1rem;
+    bottom: -9rem;
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
-    /* opacity: 0; */
+    opacity: 0;
     transition: opacity 1s 1s;
+    z-index: 1;
 }
 
 .card-description {
@@ -187,4 +204,94 @@ img {
 .price span {
     font-size: .67rem;
     font-weight: 600;
+}
+
+/* === card animation === */
+.card:hover .card-data {
+    animation: showCard 2s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card:hover {
+    animation: removeCard 1s forwards;
+}
+
+.card:not(:hover) {
+    animation: showOverflow 2s forwards;
+}
+
+.card:not(:hover) .card-data {
+    animation: removeCardData 1s forwards;
+}
+
+/* === keyframes animation === */
+@keyframes showCard {
+    /* 0% {
+        transform: scaleY(0);
+    } */
+
+    50% {
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes removeCard {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes removeCardData {
+    0% {
+        transform: translateY(-7rem);
+    }
+
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(-.5rem);
+    }
+}
+
+@keyframes showOverflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+
+    50% {
+        overflow: hidden;
+        /* pointer-events: auto; */
+    }
+}
+
+/* ==========================================
+   4. MEDIA QUERIES (BREAKPOINTS)
+   ========================================== */
+
+/* --tablet (lebar > 640px) => repeat 2 kolom-- */
+@media (min-width: 640px) {
+    .card-grid {
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* --desktop atau pc (lebar > 1024px) => repeat 3 kolom-- */
+@media (min-width: 1024px) {
+    .card-grid {
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .page-header {
+        font-size: 1.8rem;
+    }
 }
