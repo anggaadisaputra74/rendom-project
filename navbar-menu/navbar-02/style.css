@@ -9,8 +9,8 @@
     /* Color Palette */
     --body-color: #e4e9f7;
     --card-color: #ffffff;
-    --primary-color: #1297a0;
-    --primary-hover: #137a84;
+    --primary-color: #0c5363;
+    --primary-hover: #5da3df;
     --font-title: #202020;
     --font-sub: #707070;
     --border-color: #dcdcdc;
@@ -26,6 +26,174 @@
 
 body {
     background-color: var(--body-color);
+    background-image: url(img/02.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     color: var(--font-title);
-    padding: 1.9rem .9rem;
+    /* padding: 1.9rem .9rem; */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    background: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+
+.navbar-logo {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--primary-hover);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-logo span {
+    font-family: var(--font-serif);
+    color: var(--card-color);
+}
+
+.navbar-container .navbar-menu {
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.navbar-container .navbar-menu li a {
+    text-decoration: none;
+    text-shadow: 2px 4px 10px rgba(255, 255, 255, 1);
+    color: var(--primary-color);
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .2rem 1.2rem;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-container .navbar-menu li a::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    transition: var(--tran-fast);
+}
+
+.navbar-container .navbar-menu li a:hover::before {
+    width: 50%;
+}
+
+.navbar-container .navbar-menu li a:hover {
+    color: var(--card-color);
+    text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.9);
+    transform: translateX(10%);
+}
+
+.navbar-toggle {
+    display: none;
+    background: transparent;
+    padding: .5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: .2rem auto;
+    background-color: var(--border-color);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* ==========================================
+   4. MEDIA QUERIES (BREAKPOINTS)
+   ========================================== */
+
+@media (max-width: 760px) {
+    .navbar {
+        backdrop-filter: none;
+    }
+
+    .navbar-container .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+        z-index: 998;
+    }
+
+    .navbar-container .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 1000;
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.7rem;
+    }
+
+    .navbar-container .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: .3rem 1rem;
+    }
 }
