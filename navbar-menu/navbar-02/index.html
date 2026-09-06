@@ -6,16 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Navbar Part #02</title>
     <!-- === STYLE CSS === -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
     <!-- === FEATHER ICONS === -->
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
-
+    <navbar class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">Snipet_Logo</a>
+            <button class="navbar-toggle" id="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </navbar>
 
 
     <!-- === SCRIPT JS === -->
+    <script src="script.js"></script>
+
     <!-- === SCRIPT FOR FEATHER ICONS === -->
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>
