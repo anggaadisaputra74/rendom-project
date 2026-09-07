@@ -1,0 +1,36 @@
+:root {
+    /* Color Palette */
+    --body-color: #e4e9f7;
+    --card-color: #ffffff;
+    --primary-color: #0c5363;
+    --primary-hover: #5da3df;
+    --font-title: #202020;
+    --font-sub: #707070;
+    --border-color: #dcdcdc;
+
+    /* Soft Box Shadow */
+    --shadow-card: inset 0px -1px 6px rgba(0, 0, 0, 0.9), inset 0px -1px 6px rgba(255, 255, 255, .7);
+
+    /* Fonts & Transition */
+    --family: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --tran-fast: all 0.2s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-serif);
+}
+
+body {
+    background-color: var(--body-color);
+    background-image: url('img/01.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--font-title);
+    padding: 2rem 1rem;
+    min-height: 100vh;
+}
