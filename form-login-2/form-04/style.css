@@ -184,8 +184,8 @@ body {
 
 .checkbox label {
     cursor: pointer;
-    font-weight: 600;
-    color: var(--primary-color);
+    font-weight: 500;
+    color: var(--card-color);
 }
 
 .forget {
@@ -194,8 +194,8 @@ body {
 
 .forget-password {
     text-decoration: none;
-    font-weight: 600;
-    color: var(--primary-color);
+    font-weight: 500;
+    color: var(--card-color);
 }
 
 .forget .forget-password::before {
@@ -248,9 +248,9 @@ body {
 }
 
 .social-login {
-    color: var(--primary-hover);
+    color: var(--card-color);
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
     /* border: 1px solid var(--card-color); */
     overflow: hidden;
     border-radius: 8px;
