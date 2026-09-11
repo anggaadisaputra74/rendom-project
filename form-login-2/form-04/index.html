@@ -22,9 +22,14 @@
 <body>
     <main class="main-container">
         <div class="card-form">
+            <header class="page-header">
+                <h1>
+                    form-login
+                </h1>
+            </header>
             <form action="" class="form">
                 <!-- === group email === -->
-                <div class="group-email">
+                <div class="input-group">
                     <label for="mail">Email</label>
                     <div class="input-wrapper">
                         <input type="email" name="email" id="mail" class="input" placeholder="name@email.com" required>
@@ -32,7 +37,7 @@
                 </div>
 
                 <!-- === group password === -->
-                <div class="group-password">
+                <div class="input-group">
                     <label for="password">Password</label>
                     <div class="input-wrapper">
                         <input type="password" name="passowrd" id="password" class="input" placeholder="....." required>
@@ -43,8 +48,29 @@
                     </div>
                 </div>
                 <!-- === remember me & forget password === -->
+                <div class="form-option">
+                    <div class="checkbox">
+                        <input type="checkbox" name="remember" id="checkbox" required>
+                        <label for="checkbox">Remember me</label>
+                    </div>
+                    <div class="forget">
+                        <a href="#" class="forget-password">Forget password</a>
+                    </div>
+                </div>
+
                 <!-- === button submit === -->
+                <div class="btn-submit">
+                    <button type="submit">login</button>
+                </div>
+
                 <!-- === social login === -->
+                <div class="social-login">
+                    <span class="login-with">or login with</span>
+                    <a href="#" class="btn-google">
+                        <img src="" alt="logo google">
+                        <span>Google</span>
+                    </a>
+                </div>
             </form>
         </div>
     </main>
