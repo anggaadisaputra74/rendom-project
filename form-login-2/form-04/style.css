@@ -59,7 +59,7 @@ body {
     background-color: rgba(255, 255, 255, .2);
     backdrop-filter: blur(2px);
     border-radius: 15px;
-    box-shadow: var(--shadow-input2);
+    box-shadow: var(--shadow-input1);
     /* position: relative; */
 }
 
@@ -126,7 +126,7 @@ body {
     border: 1px solid var(--card-color);
     border-radius: 9px;
     outline: none;
-    box-shadow: var(--shadow-input2), var(--shadow-input1);
+    box-shadow: var(--shadow-input2);
     font-size: .76rem;
     font-weight: 600;
     transition: var(--tran-fast);
@@ -230,7 +230,7 @@ body {
     text-transform: uppercase;
     border-radius: 10px;
     transition: var(--tran-fast);
-    box-shadow: var(--shadow-input2), var(--shadow-input1);
+    box-shadow: var(--shadow-input2);
     color: var(--card-color);
     text-shadow: 1px 2px 4px rgb(0, 0, 0, 1);
 }
